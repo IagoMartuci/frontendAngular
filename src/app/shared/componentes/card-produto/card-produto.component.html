@@ -1,0 +1,25 @@
+<div class="card" style="width: 18rem">
+  <img [src]="foto" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ nomeProduto | uppercase }}
+      <!--ngIf aula 20/10/2022, menos o elseif, que aparentemente não existe no Angular, mas funcionou-->
+      <!--<span *ngIf="promocao; else elseBlock" class="badge badge-success">Promoção</span>
+      <span *ngIf="promocao; elseif elseBlock" class="badge badge-warning ml-1">Aproveite!</span>
+      <ng-template #elseBlock>
+        <span class="badge badge-primary">Parcelamento sem juros</span>
+      </ng-template>-->
+      <!--Teste ngIf utilizando apenas if, sem o else-->
+      <span *ngIf="promocao;" class="badge badge-success">Promoção</span>
+      <span *ngIf="promocao;" class="badge badge-warning ml-1">Aproveite!</span>
+      <span *ngIf="promocao == false;" class="badge badge-primary">Parcelamento sem juros</span>
+    </h5>
+    <p class="card-text">
+      Identificação: {{ idProdruto | number : "2.0-0" }}<br />
+      Validade: {{ dataValidade | date : "shortDate" }}
+    </p>
+    <a href="#" class="btn btn-primary float-right">{{
+      precoProduto | currency : "BRL"
+    }}</a>
+  </div>
+</div>

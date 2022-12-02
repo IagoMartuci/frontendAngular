@@ -1,0 +1,39 @@
+<h1 class="text-center">Seja bem vindo ao curso de Angular!</h1>
+
+<h4 class="text-danger">{{ anuncio }}</h4>
+
+<div class="row">
+  <div class="col">
+    <app-card-produto
+      [foto]="foto"
+      [nomeProduto]="nomeProduto"
+      [promocao]="promocao"
+      [idProdruto]="idProdruto"
+      [dataValidade]="dataValidade"
+      [precoProduto]="precoProduto"
+    >
+    </app-card-produto>
+  </div>
+  <div class="col">
+    <app-card-produto
+      foto="https://stheontheroad.com/wp-content/uploads/2016/11/parlamento-Budapeste-2.jpg"
+      nomeProduto="Viagem a Budapeste"
+      [promocao]="true"
+      [idProdruto]="15"
+      dataValidade="2022-12-31"
+      [precoProduto]="5434.0"
+    >
+    </app-card-produto>
+  </div>
+  <div class="col">
+    <app-card-produto
+      foto="https://www.fashionbubbles.com/wp-content/uploads/2020/12/ilhas-maldivas.png"
+      nomeProduto="Viagem as Maldivas"
+      [promocao]="false"
+      [idProdruto]="16"
+      dataValidade="2022-12-31"
+      [precoProduto]="10000"
+    >
+    </app-card-produto>
+  </div>
+</div>
